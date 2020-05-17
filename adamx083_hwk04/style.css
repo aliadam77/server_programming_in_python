@@ -1,0 +1,195 @@
+.Contacts table,th,td{
+			border:0.0625em solid black;
+			border-collapse : collapse;
+			text-align: left;
+			table-layout: auto;
+			height: 1.50em;
+		}
+tr img {
+			display: none;
+
+		}
+html {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+tr:hover img {
+			display: block;
+			height :2em;
+			width : 2em;
+		}
+tr:nth-child(even) {background-color: #ffb71e;}
+tr:nth-child(odd) {background-color: #f2f2f2;}
+th {
+  background-color: #7a0019;
+  color: white;
+}
+table#Contacts{
+  border-collapse: collapse;
+  table-layout: auto;
+  height: 1em;
+  width: 1em;
+}
+
+th {
+  height: 1.875em;
+}
+.grid-item2 img {
+	width : 10.25em;
+	height : 10.5em;
+}
+.grid-items img {
+	width : 3.25em;
+	height:3.5em;
+}
+
+.navigation ul {
+		  list-style-type: none;
+		  margin: 0;
+		  padding: 0;
+		  overflow: hidden;
+		  background-color: #7a0019;
+		}
+.navigation li{
+			float : left;
+
+		}
+
+.navigation li a:hover {
+			background-color: #ffb71e;
+			color: black;
+		}
+.navigation a {
+			display: block;
+			color: #fff;
+			padding: 0.5em 1em;
+			text-decoration: none;
+		}
+
+h1 {
+			font-family: Arial,serif, san-serif;
+		}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: 50% 50% ;
+	height: 50%;
+  padding: 0;
+}
+.grid-container2 {
+  display: grid;
+	height: 50%;
+  grid-template-columns: 25% 49.9% 25%;
+  padding: 0;
+}
+.grid-item {
+  border: none;
+  padding:60px;
+  font-size: 13px;
+  text-align: left;
+	height: 20em;
+
+}
+
+.grid-item-map{
+	border: none;
+	padding:60px;
+  font-size: 13px;
+  text-align: left;
+	height: 13em;
+}
+.grid-item2 {
+  border: none;
+  padding:60px;
+  font-size: 20px;
+  text-align: center;
+}
+#register label{
+margin-right:5px;
+}
+#register input {
+padding: 5px 14px;
+border: 1px solid #d5d9da;
+box-shadow: 0 0 9px #0E34F5 inset;
+width: 272px;
+font-size: 1em;
+height: 25px;
+}
+#register .short{
+font-weight:bold;
+color:#FF0000;
+font-size:larger;
+}
+#register .weak{
+font-weight:bold;
+color:orange;
+font-size:larger;
+}
+#register .good{
+font-weight:bold;
+color:#2D98F3;
+font-size:larger;
+}
+#register .strong{
+font-weight:bold;
+color: limegreen;
+font-size:larger;
+}
+
+table .Form {
+  table-layout: auto;
+  border-collapse: collapse;
+  table-layout: auto;
+  height: 60.50em;
+  width: 6em;
+	margin: auto;
+
+}
+
+td .Form  {
+    padding: 0;
+	  text-align: center;
+    vertical-align: middle;
+ }
+.b1 {
+	/*background: url("bg2.jpg");  */
+    height: 100%;
+    margin: 0;
+    padding: 0;
+
+}
+
+.b2 {
+}
+
+.b3 {
+	/* background: url("bg4.jfif"); */
+}
+
+ #map {
+		width: 40em;
+		height:  20.50em;
+    margin-right: 10%;
+
+
+      }
+#map2 {
+	 width: 40em;
+	 height:  15.50em;
+	 margin-right: 10%;
+
+
+		 }
+.grid-item #side-panel {
+       float: none;
+       width: auto;
+			 height: 16em;
+
+}
+#goButton{
+	font-size: 80px;
+}
+#searchButton{
+	font-size: 80px;
+}

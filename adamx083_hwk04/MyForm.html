@@ -1,0 +1,57 @@
+<!DocType html>
+<html>
+	<head>
+		<meta name="viewport" content="initial-scale=1.0 user-scalable=no">
+		<meta charset= "utf-8">
+		<title> My Form </title>
+		<link rel = "stylesheet" type = "text/css" href = "style.css">
+		<script type="text/javascript" src="map2.js"></script>
+	</head>
+	<body class = "b2">
+		<nav class = "navigation">
+		<ul>
+			<li><a href="MyContacts.html">My Contacts</a></li>
+			<li><a href="MyForm.html">My Form</a></li>
+			<li><a href="MyWidgets.html">My Widgets</a></li>
+		</ul>
+		</nav>
+		<div class="grid-container">
+			<div class="grid-item">
+						<form method = "post" action = "http://localhost:9001">
+							<table class="Form">
+
+								<tr>
+								  <td>Name</td>
+								  <td><input id="name" name="name" type="text" required pattern="\b[a-zA-Z0-9 ,]+\b"></td>
+								</tr>
+								<tr>
+								  <td>Email</td>
+								  <td><input id="email" name="email" type="email" required></td>
+								</tr>
+								<tr>
+								  <td>Address</td>
+								  <td><input id="address" name="address" type="text" required></td>
+								</tr>
+								<tr>
+								  <td>Favorite Place</td>
+								  <td><input id="place" name="place" type="text" required pattern="\b[a-zA-Z0-9 ,]+\b"></td>
+								</tr>
+								<tr>
+								  <td>Enter URL for Favorite Place</td>
+								  <td><input id="url" name="url" type="url" required></td>
+								</tr>
+								<tr>
+								  <td></td>
+								  <td><input type="submit"></td>
+								</tr>
+							</table>
+						</form>
+				</div>
+
+				<div class="grid-item">
+					<div id="map2"></div>
+					<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIlF6QUC-ubZ4YPG7lCWGlvkSVCTtUaCM&libraries=places&callback=initMap2" async defer></script>
+				</div>
+		</div>
+	</body>
+</html>

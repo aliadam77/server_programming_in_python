@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta name="viewport" content="initial-scale=1.0 user-scalable=no">
+		<meta charset = "utf-8">
+		<title>My Contacts</title>
+		<link rel = "stylesheet" type = "text/css" href = "style.css">
+		<script type="text/javascript" src="slideShow.js"></script>
+		<script type="text/javascript" src="map.js"></script>
+	</head>
+
+	<body class = "b1">
+		<nav class = "navigation">
+		<ul>
+			<li><a href="MyContacts.html">My Contacts</a></li>
+			<li><a href="MyForm.html">My Form</a></li>
+			<li><a href="MyWidgets.html">My Widgets</a></li>
+		</ul>
+		</nav>
+
+		<h1>My Contacts</h1>
+
+		<div class="grid-container">
+
+			<div class="grid-item2">
+				<table id = "Contacts">
+					<thead>
+						<tr>
+							<th> Name </th>
+							<th> Email </tH>
+							<th> Address </th>
+							<th> Phone Number </th>
+							<th> Favourite Place </th>
+						</tr>
+					</thead>
+					<tbody>
+
+						<tr>
+							<td>  Doc Brown <img src="docMartin.png" alt="Picture of Doc"/> </td>
+							<td> Brownx245@umn.edu </td>
+							<td> 100 Union St SE, Minneapolis, MN 55455 </td>
+							<td> (619)-585-8785 </td>
+							<td> <a href="https://www.google.com/maps/place/Shepherd+Laboratories,+100+Union+St+SE,+Minneapolis,+MN+55455/@44.9759076,-93.2345568,17z/data=!3m1!4b1!4m5!3m4!1s0x52b32d170fae4d81:0xa4d747fc3fb70d56!8m2!3d44.9759076!4d-93.2323681">Shepard Labs</a> </td>
+						</tr>
+
+						<tr>
+							<td> Thomas Anderson <img src="neo.png" alt="Picture of Neo"/> </td>
+							<td> Tander02@umn.edu </td>
+							<td> 116 Church St SE, Minneapolis, MN 55455</td>
+							<td> (619)-842-6543 </td>
+							<td> <a Href= "https://www.google.com/maps/place/John+T.+Tate+Hall/@44.9752866,-93.2367157,17z/data=!3m1!4b1!4m5!3m4!1s0x52b32d1661d0911f:0xb4bf99a8068a596f!8m2!3d44.9752866!4d-93.234527"> Tate Hall </a> </td>
+						</tr>
+
+						<tr>
+							<td> Peter Griffin <img src="PGriffin.png" alt="Picture of Peter"/> </td>
+							<td> PGriffX083@umn.edu </td>
+							<td> 312 Church St SE, Minneapolis, MN 55455 </td>
+							<td> (401)-246-6899 </td>
+							<td> <a Href= "https://www.google.com/maps/place/Nils+Hasselmo+Hall/@44.9738913,-93.2326752,17z/data=!4m5!3m4!1s0x52b32d3df590a02d:0xa6e11274ef4e9332!8m2!3d44.9728439!4d-93.2342094"> Nils Hasselmo Hall </a> </td>
+						</tr>
+					</tbody>
+	</table>
+			</div>
+			<div class="grid-item2" >
+				<img id="big" src="gophers-mascot.png" alt=""/>
+				<br>
+				<button onclick="start()">Start</button>
+				<button onclick="int=clearInterval(int)">Stop</button>
+			</div>
+</div>
+
+
+
+
+
+	<div class="grid-container2">
+			<div class="grid-item"> <div id="side-panel"> </div></div>
+			<div class="grid-item" >
+						<div id="map"></div>
+						<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAIlF6QUC-ubZ4YPG7lCWGlvkSVCTtUaCM&libraries=places&callback=initMap" async defer></script>
+			</div>
+
+			<div class="grid-item" >
+				<div class="grid-container">
+				<div class="grid-items" ><img id = "search" src="search.png" alt=""/>
+					<br>
+				</div>
+
+				<div class="grid-items" >
+					<label for="menu-categories"> Find </label>
+					<select id="menu-categories" name="categories" onload="changeSearch();" onChange="changeSearch();">
+					<option value="restaurant">Restaurant</option>
+					<option value="hospital">Hospital</option>
+					<option value="parking">Parking</option>
+					<option value="supermarket">Supermarket</option>
+					<option value="other">Other</option>
+					</select>
+
+					<input type="text" disabled id="other_places" placeholder="Enter Other Places">
+					<br>
+					<label for="in-radius"> in </label>
+					<input type="number" id="in-radius">
+					<label for="in-radius"> meters </label> <br>
+					<input type="submit" id="searchButton" value="Search" onclick="getPlaces();"> <br>
+					<br>
+				</div>
+				<div class="grid-items" ><img id = "direction" src ="direction.png" alt=""/></div>
+				<div class="grid-items" >
+					 <label for="desLoc"> direction to </label>
+					 <input type="text" id="desLoc">
+					 <br>
+					 <label for="desLoc"> by </label>
+
+					 <div id="directionsRadioButtons">
+							 <input type="radio" id="walkRadio" name="dir_choice" value="WALKING">
+							 <label for="walkRadio"> WALK </label><br><br>
+							 <input type="radio" id="driveRadio" name="dir_choice" value="DRIVING">
+							 <label for="driveRadio"> DRIVE </label><br><br>
+							 <input type="radio" id="transRadio" name="dir_choice" value="TRANSIT">
+							 <label for="transRadio"> TRANS </label><br>
+							 <input type="submit" id="goButton" value="Go" onclick="getDirections()"> <br>
+					 </div>
+
+
+				</div>
+				</div>
+			</div>
+
+		</div>
+	</body>
+</html>
